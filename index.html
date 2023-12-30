@@ -2,6 +2,15 @@
 <html>
     <head>
         <style>
+            body {
+                background-color: white;
+                color: black;
+            }
+            .dark-theme
+            {
+                background-color: black;
+                color: white;
+            }
             h1, h2, h3, h4, h5, h6 {
                 font-family: sans-serif;
                 text-align: center;
@@ -14,16 +23,27 @@
             .logo {
                 position: relative;
             }
+            .toggle-theme {
+                position: relative;
+            }
         </style>
     </head>
     <body>
         <div class="logo">
             <a href="index.html">
-                <img src="images/logo.gif" alt="Logo" width="10%">
+                <img src="images/logo.gif" alt="Logo" width="20%">
             </a>
+        </div>
+        <div class="toggle-theme">
+            <button onclick="themeChange()">Toggle theme</button>
         </div>
         <p>
             Welcome to my website where I host files and stuff.
         </p>
+        <script>
+            function themeChange() {
+                document.body.classList.toggle("dark-theme");
+            }
+        </script>
     </body>
 </html>
